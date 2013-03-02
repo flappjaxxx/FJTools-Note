@@ -37,30 +37,5 @@ public class AppsActivity extends ScriptedActivity {
 
 	    return super.onKeyDown(keyCode, event);
 	}
-	@Override
-    public boolean onCreateOptionsMenu(Menu menu4) {
-	    MenuInflater inflater = getMenuInflater();
-	    inflater.inflate(R.layout.menu4, menu4);
-	    return true;
-	}
-    @Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-	    // Handle item selection
-	    switch (item.getItemId()) {
-	    case R.id.changelog:
-	    	try {
-				Runtime.getRuntime().exec("am start -a android.intent.action.MAIN -n com.flappjaxxx.fjtools/.ChangelogActivity");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-	        return true;
-	    case R.id.exit_app:
-	    	System.exit(0);
-	        return true;
-	    default:
-	        return super.onOptionsItemSelected(item);
-	    }
-    }
     
 }

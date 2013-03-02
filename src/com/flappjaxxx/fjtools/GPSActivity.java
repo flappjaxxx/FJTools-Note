@@ -30,21 +30,4 @@ public class GPSActivity extends ScriptedActivity {
 
 	    return super.onKeyDown(keyCode, event);
 	}
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-	    MenuInflater inflater = getMenuInflater();
-	    inflater.inflate(R.layout.menu, menu);
-	    return true;
-	}
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-	    // Handle item selection
-	    switch (item.getItemId()) {
-	    case R.id.exit_app:
-	    	System.exit(0);
-	        return true;
-	    default:
-	        return super.onOptionsItemSelected(item);
-	    }
-	}
 }
